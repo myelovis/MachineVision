@@ -1,0 +1,20 @@
+
+Edge Detection 
+https://bmva-archive.org.uk/bmvc/1988/avc-88-023.pdf
+
+Harris Matrix
+Usually, a value in an image is of (0, 255) pixel
+But, in Harris Matric, each value is a matrix
+
+A single Pixel
+For a singel pixel R = Det(M) - k((Trace))^2
+with:                      M 2x2 (pixels) Matrix
+
+Detection changing/ movements in
+Flat region - 1D
+Edge - 2D
+Corner - 3D
+
+Python developers ignore about the 'quality' of an variable
+Different from tensorflow, numpy developers, who have to care and have a careful look on 
+what type of variable to put on the program. 
