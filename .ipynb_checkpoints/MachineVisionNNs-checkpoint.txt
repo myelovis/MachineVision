@@ -1,0 +1,62 @@
+OBJECT DETECTION vs EDGE DETECTION
+
+Sometimes, people misuses the code and perceive wrongly between a task of Edge Detection into Object Detection. 
+Showing the ability to detect an object's edge does not means the provided code can be used to detect the object.
+ttps://circuitdigest.com/tutorial/real-life-object-detection-using-opencv-python-detecting-objects-in-live-video
+Answer to these questions:
+
+1. Is it actually using opencv?
+
+2. Is it using orb?
+
+3. Is it object detection?
+
+4. Is there errors or mistakes in the documentation?
+
+
+TRADITIONAL COMPUTER VISION SYSTEM
+
+Before the advent of deep learning techniques, focused on various fundamental concepts and methods. Here are some important aspects of traditional computer vision systems:
+
+### 1. **Image Processing:**
+   - **Filtering and Convolution:** Techniques like Gaussian blur, edge detection using Sobel operators, and other convolution-based filters were extensively used for preprocessing images.
+   - **Thresholding:** Converting grayscale images into binary images by selecting an appropriate threshold value.
+   - **Morphological Operations:** Erosion, dilation, opening, and closing operations for processing binary images.
+
+### 2. **Feature Extraction:**
+   - **Corner Detection:** Identifying interest points in images, often using algorithms like Harris corner detector.
+   - **Edge Detection:** Detecting edges in images using techniques like Canny edge detector.
+   - **Histogram of Oriented Gradients (HOG):** Describing the local object appearance and shape by the distribution of intensity gradients or edge directions.
+
+### 3. **Object Recognition:**
+   - **SIFT (Scale-Invariant Feature Transform):** A method for detecting and describing local features in images, which is invariant to image scale and rotation.
+   - **SURF (Speeded-Up Robust Features):** An algorithm for local feature detection which is mainly used for tasks such as object recognition.
+   - **Template Matching:** Comparing a portion of an image to a template image to find matching regions.
+
+### 4. **Segmentation:**
+   - **Thresholding-Based Segmentation:** Dividing an image into segments based on pixel intensity levels.
+   - **Region-Based Segmentation:** Merging neighboring pixels with similar properties into regions.
+   - **Contour Detection:** Finding boundaries of objects in an image.
+
+### 5. **Depth Perception:**
+   - **Stereo Vision:** Using two cameras to perceive depth by comparing disparities between the images.
+   - **Structured Light:** Projecting known patterns onto a scene and analyzing deformations in the pattern to determine depth.
+
+### 6. **Camera Calibration:**
+   - **Intrinsic and Extrinsic Parameters:** Calibrating cameras to understand their internal and external geometry, which is crucial for accurate vision tasks.
+
+### 7. **Motion Analysis:**
+   - **Optical Flow:** Calculating the movement of pixels between consecutive frames in a video sequence.
+   - **Background Subtraction:** Identifying moving objects by subtracting the static background from the current frame.
+
+### 8. **Machine Learning Techniques:**
+   - **Classifiers:** Using traditional machine learning algorithms like Support Vector Machines (SVM), Decision Trees, and Random Forests for object classification.
+   - **Clustering:** Employing algorithms like k-means clustering for grouping similar pixels or regions.
+
+### 9. **Applications:**
+   - **Object Detection and Tracking:** Identifying and tracking objects in real-time video streams.
+   - **Face Detection and Recognition:** Recognizing faces in images or video frames.
+   - **Image Stitching:** Combining multiple images to create a panoramic view.
+   - **Augmented Reality:** Overlaying virtual objects onto the real-world scene captured by a camera.
+
+Traditional computer vision techniques still form the foundation of many modern applications, often combined with deep learning methods for enhanced performance and accuracy.

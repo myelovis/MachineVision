@@ -18,3 +18,12 @@ Corner - 3D
 Python developers ignore about the 'quality' of an variable
 Different from tensorflow, numpy developers, who have to care and have a careful look on 
 what type of variable to put on the program. 
+
+In Tensorflow, first define then combine NNs
+(ou define the entire computation graph (layers, operations, and connections) first and then feed the data through the graph.)
+but in Pytorch, uses a dynamic computational graph, it builds and changes the graph on-the-fly as operations are executed. 
+pytorch.org 
+
+
+
+Tensor is n_dimensional, in compare to matrix and vertical.
