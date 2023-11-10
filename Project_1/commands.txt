@@ -1,0 +1,2 @@
+cd :~/MachineVision/Project_1$ 
+python3 detect.py --input input/video_2.mp4 -c 4

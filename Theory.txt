@@ -27,3 +27,21 @@ pytorch.org
 
 
 Tensor is n_dimensional, in compare to matrix and vertical.
+
+
+Preprocessing Vs Augmentation
+Prep: 
+. prepare the image to fit into a training model
+. resizing, cropping, scaling pixel values between 0 and 1, normalization
+Aug: 
+. modify current dataset to get more versions of them, which result more noise for training
+. apply random yet realistic, transformation to the input images
+. help models less prone to overfitting, to have improved generalization capabilities
+(the model understands the concept fron different aspects and works well in even modified 
+input standards/ environments)
+. horizontal and vertical flips, random rotation, color jittering, scaling (zooming), 
+affine transformation, perspective transformation, erasing, gaussian blur, custom transforms 
+. adjust the para maters and peobabilites for each augenmatin to ensure they introduce sufficient 
+variability without distorting the underlying data distribution
+"you win something, you loose something"
+"ALWAYS keep the original dataset in somewhere, before make augmentation"
