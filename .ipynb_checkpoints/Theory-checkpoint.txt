@@ -18,3 +18,44 @@ Corner - 3D
 Python developers ignore about the 'quality' of an variable
 Different from tensorflow, numpy developers, who have to care and have a careful look on 
 what type of variable to put on the program. 
+
+In Tensorflow, first define then combine NNs
+(ou define the entire computation graph (layers, operations, and connections) first and then feed the data through the graph.)
+but in Pytorch, uses a dynamic computational graph, it builds and changes the graph on-the-fly as operations are executed. 
+pytorch.org 
+
+
+
+Tensor is n_dimensional, in compare to matrix and vertical.
+
+
+Preprocessing Vs Augmentation
+Prep: 
+. prepare the image to fit into a training model
+. resizing, cropping, scaling pixel values between 0 and 1, normalization
+Aug: 
+. modify current dataset to get more versions of them, which result more noise for training
+. apply random yet realistic, transformation to the input images
+. help models less prone to overfitting, to have improved generalization capabilities
+(the model understands the concept fron different aspects and works well in even modified 
+input standards/ environments)
+. horizontal and vertical flips, random rotation, color jittering, scaling (zooming), 
+affine transformation, perspective transformation, erasing, gaussian blur, custom transforms 
+. adjust the para maters and peobabilites for each augenmatin to ensure they introduce sufficient 
+variability without distorting the underlying data distribution
+"you win something, you loose something"
+"ALWAYS keep the original dataset in somewhere, before make augmentation"
+
+*** torch.nn.functional vs. torch.nn.module ***
+ | torch.nn.functional |
+a. 'Funtional API': providing stateless functions, those used within forward passes of torch.nn.Module subclasses
+b. Functional Interface: provides functions that directly perform operations on input data, these functions are stateless, meaning not store any internal state or weights
+c. Flexibility: enable defining custom operations or layer behaviours on-the-fly
+d. Manual Weight Management: need to manually manage weights and biases, which can be more error-prone but offers greater control; Pytorch's optimizers simplifies the training loop, making it more managebale and less error-prone, even when using torch.nn.functional
+e. Use Case: Ideal for more dynamic or complxe architectures where custom behaviour is needed, or for operations that do not require maintaing state (like activation functions)
+| torch.nn.module |
+a. base class for all neuralnetworks modules, allows defining and organixing 
+learnable paramaters, like weights and biases, facilitate model contruction
+b. Object-Oriented Interface: classes provided for layers and models, wieghts and biases encapsulated within objects
+c. Easy of USe: easier to use for standard architectures
+d: Use cause: suited for traditiona, static NNs architectures where layers behaviour does not need to change dynamically

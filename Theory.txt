@@ -45,3 +45,17 @@ affine transformation, perspective transformation, erasing, gaussian blur, custo
 variability without distorting the underlying data distribution
 "you win something, you loose something"
 "ALWAYS keep the original dataset in somewhere, before make augmentation"
+
+*** torch.nn.functional vs. torch.nn.module ***
+ | torch.nn.functional |
+a. 'Funtional API': providing stateless functions, those used within forward passes of torch.nn.Module subclasses
+b. Functional Interface: provides functions that directly perform operations on input data, these functions are stateless, meaning not store any internal state or weights
+c. Flexibility: enable defining custom operations or layer behaviours on-the-fly
+d. Manual Weight Management: need to manually manage weights and biases, which can be more error-prone but offers greater control; Pytorch's optimizers simplifies the training loop, making it more managebale and less error-prone, even when using torch.nn.functional
+e. Use Case: Ideal for more dynamic or complxe architectures where custom behaviour is needed, or for operations that do not require maintaing state (like activation functions)
+| torch.nn.module |
+a. base class for all neuralnetworks modules, allows defining and organixing 
+learnable paramaters, like weights and biases, facilitate model contruction
+b. Object-Oriented Interface: classes provided for layers and models, wieghts and biases encapsulated within objects
+c. Easy of USe: easier to use for standard architectures
+d: Use cause: suited for traditiona, static NNs architectures where layers behaviour does not need to change dynamically
