@@ -59,3 +59,17 @@ learnable paramaters, like weights and biases, facilitate model contruction
 b. Object-Oriented Interface: classes provided for layers and models, wieghts and biases encapsulated within objects
 c. Easy of USe: easier to use for standard architectures
 d: Use cause: suited for traditiona, static NNs architectures where layers behaviour does not need to change dynamically
+
+Transfer Learning 
+Applied successful pre-trained NNs to a new training with similar task and the dataset having similar features
+
+Freezing Layers 
+Freezing layers in a neural network means preventing the weights of those layers from being updated during the training process. 
+This is often done to retain previously learned features and representations while fine-tuning or training other parts of the network.
+The knowledge captured in pre-trained layers of a neural network is stored in the weights of the neurons within those layers. 
+During the training process, the weights of the network are adjusted to minimize the difference between
+the predicted output and the actual target values. These weights encode the patterns, features, and 
+representations that the network has learned from the training data.
+In the context of transfer learning, when a neural network is pre-trained on a source task and then fine-tuned on a target task,
+the knowledge learned in the pre-trained layers is preserved by keeping those weights fixed (or partially fixed) during
+the fine-tuning process.    
